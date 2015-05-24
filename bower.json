@@ -1,0 +1,25 @@
+{
+  "name": "streetparty",
+  "version": "0.0.1",
+  "authors": [
+    "Midori Koçak <mtkocak@gmail.com>"
+  ],
+  "description": "front end dependencies for the app",
+  "keywords": [
+    "streetparty",
+    "jquery",
+    "mobile"
+  ],
+  "license": "MIT",
+  "homepage": "http://www.mtkocak.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery-mobile-bower": "~1.4.5"
+  }
+}

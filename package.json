@@ -1,0 +1,36 @@
+{
+  "name": "streetparty",
+  "version": "0.0.1",
+  "description": "Streetparty is a mobile hybrid app",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mtkocak/streetparty.git"
+  },
+  "keywords": [
+    "jquery",
+    "mobile",
+    "streetparty",
+    "geocoding",
+    "phonegap"
+  ],
+  "author": "Midori Kocak <mtkocak@mtkocak.net>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mtkocak/streetparty/issues"
+  },
+  "homepage": "https://github.com/mtkocak/streetparty",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-concat": "^0.5.1",
+    "grunt-contrib-jshint": "^0.11.2",
+    "grunt-contrib-less": "^1.0.1",
+    "grunt-contrib-uglify": "^0.9.1",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-phpunit": "^0.3.6",
+    "grunt-wiredep": "^2.0.0"
+  }
+}
