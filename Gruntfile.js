@@ -3,15 +3,34 @@ module.exports = function(grunt) {
 
   // Project configuration.
   grunt.initConfig({
+     pkg: grunt.file.readJSON("package.json"),
+     
     // Metadata.
     meta: {
       version: '0.1.0'
     },
-    wiredep: {
-       target: {
-         src: 'index.html' // point to your HTML file.
-       }
-     },
+     htmlbuild: {
+           dist: {
+               src: 'pages/*.html',
+               dest: 'app/',
+               options: {
+                  recursive: true,
+                  beautify: true,
+                   relative: true,
+                   sections: {
+                       layout: {
+                           header: 'layout/header.html',
+                           footer: 'layout/footer.html'
+                       }
+                   },
+               }
+           }
+       },
+       wiredep: {
+          target: {
+            src: 'app/*.html' // point to your HTML file.
+          }
+        },
     banner: '/*! Streetparty - v<%= meta.version %> - ' +
       '<%= grunt.template.today("yyyy-mm-dd") %>\n' +
       '* http://http://www.mtkocak.com/\n' +
@@ -79,9 +98,10 @@ module.exports = function(grunt) {
 //  grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-html-build');
   grunt.loadNpmTasks('grunt-wiredep');
 
   // Default task.
-  grunt.registerTask('default', ['wiredep','jshint']);
+  grunt.registerTask('default', ['htmlbuild','wiredep','jshint']);
 
 };
