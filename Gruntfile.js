@@ -12,7 +12,7 @@ module.exports = function(grunt) {
      htmlbuild: {
            dist: {
                src: 'pages/*.html',
-               dest: 'app/',
+               dest: 'www/',
                options: {
                   recursive: true,
                   beautify: true,
@@ -28,7 +28,7 @@ module.exports = function(grunt) {
        },
        wiredep: {
           target: {
-            src: 'app/*.html' // point to your HTML file.
+            src: 'www/*.html' // point to your HTML file.
           }
         },
     banner: '/*! Streetparty - v<%= meta.version %> - ' +
